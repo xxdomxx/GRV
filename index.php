@@ -30,8 +30,12 @@
 	   <h4 class="modal-title">Veuillez-vous connecter</h4>
 	  </div>
 	  <div class="modal-body">
-	   <input id="usernameId" type="text" name="username" value="" placeholder="Nom d'utilisateur" required/>
-	   <input id="passwordId" type="password" name="password" value="" placeholder="Mot de passe" required/>
+	   <div class="row">
+	    <div class="col-md-10 col-md-offset-1">
+	     <input id="usernameId" class="form-control" type="text" name="username" value="" placeholder="Nom d'utilisateur" required/><br />
+	     <input id="passwordId" class="form-control" type="password" name="password" value="" placeholder="Mot de passe" required/>
+		</div>
+	   </div>
 	  </div>
 	  <div class="modal-footer">
 	   <button id="btnConnection" type="submit" class="btn btn-primary">Connexion</button>	   

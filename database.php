@@ -7,12 +7,14 @@
 	function connect()
 	{
 		global $connected;
+		//$databaseString = 'grv';//Prod
+		$databaseString = 'grvTest';//Test
 		
 		if($connected)
 			return $connected;
 		
 		$connected = @mysql_connect('localhost', 'root', '*nimda123456*') or die('Impossible de se connecter : ' . mysql_error());
-		@mysql_select_db('grv', $connected) or die('Impossible de se connecter : ' . mysql_error());
+		@mysql_select_db($databaseString, $connected) or die('Impossible de se connecter : ' . mysql_error());
 		
 		return $connected;
 	}
@@ -41,5 +43,17 @@
 		
 		return $result;
 	}
+	
+	/*function findAllCustomer()
+	{
+		$query = "Select id, name, number from customer";
+		$queryResult = mysql_query($query);
+		connect();		
+		if(!$queryResult)
+		{
+			
+		}
+		disconnect();
+	}*/
  }
 ?>
